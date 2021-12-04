@@ -1,4 +1,4 @@
-# docker-go-samples
+# Docker-Go first simple image with web-server
 
 
 ## Create docker image 
