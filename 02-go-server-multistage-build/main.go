@@ -7,7 +7,7 @@ import (
 )
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello From Docker Container!")
+	fmt.Fprintf(w, "Hello From Multi-Stage Docker Container!")
 }
 
 func main() {

@@ -5,7 +5,7 @@
 Create a docker image using Dockerfile, the syntax will be like "docker build . -t image-name:tag-name"
 
 ```bash
-docker build . -t godocker-app-01:goDockerAppTag
+docker build . -t godocker-app-02:goDockerMultistage
 ```
 
 ## List Docker images 
