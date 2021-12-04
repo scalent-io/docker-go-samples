@@ -1,4 +1,4 @@
-# Docker-Go first simple image with web-server
+# Docker image with Go web-server
 
 
 ## Create Docker image 
@@ -15,7 +15,7 @@ docker images
   
 
 ## Running the docker image 
-Run the docker image as a docker container, syntax "docker run -p LOCAL-PORT:PORT-INSIDE-DOCKER-CONTAINER IMAGE-ID" 
+Run the docker image as a docker container, syntax "docker run -p HOST-PORT:CONTAINER-PORT IMAGE-ID" 
 ```bash
 docker run -p 8080:80 9b7626897732
 ```

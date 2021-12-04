@@ -1,8 +1,8 @@
-# Docker-Go first simple image with web-server
+# Multi-Stage Docker Image with Go web-server
 
 
-## Create Docker image 
-Create a docker image using Dockerfile, the syntax will be like "docker build . -t image-name:tag-name"
+## Create Multi-Stage Docker image 
+Create a Multi-Stage docker image using Dockerfile, the syntax will be like "docker build . -t image-name:tag-name"
 
 ```bash
 docker build . -t godocker-app-02:goDockerMultistage
@@ -15,7 +15,7 @@ docker images
   
 
 ## Running the docker image 
-Run the docker image as a docker container, syntax "docker run -p LOCAL-PORT:PORT-INSIDE-DOCKER-CONTAINER IMAGE-ID" 
+Run the docker image as a docker container, syntax "docker run -p HOST-PORT:CONTAINER-PORT IMAGE-ID" 
 ```bash
 docker run -p 8080:80 9b7626897732
 ```
