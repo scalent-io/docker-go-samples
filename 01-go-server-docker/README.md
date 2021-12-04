@@ -1,14 +1,14 @@
 # Docker-Go first simple image with web-server
 
 
-## Create docker image 
+## Create Docker image 
 Create a docker image using Dockerfile, the syntax will be like "docker build . -t image-name:tag-name"
 
 ```bash
 docker build . -t godocker-app:goDockerAppTag
 ```
 
-## list all the Docker images 
+## List Docker images 
 ```bash
 docker images
 ```
