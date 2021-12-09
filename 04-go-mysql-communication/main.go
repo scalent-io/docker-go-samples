@@ -57,7 +57,7 @@ func listHandler(w http.ResponseWriter, r *http.Request) {
 			fmt.Fprintf(w, "Sone error occured while looping over the result set")
 			return
 		}
-		outputStr := strconv.Itoa(id) + " - " + name + " <br> \n"
+		outputStr := strconv.Itoa(id) + " - " + name + " \n"
 		fmt.Fprintf(w, outputStr)
 	}
 
