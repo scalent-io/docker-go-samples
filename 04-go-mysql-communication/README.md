@@ -1,26 +1,26 @@
-# Multi-Stage Docker Image with Go web-server
+# Golang and MySQL communication example
 
-Running mysql in container and set password as "password" and by setting MYSQL_ROOT_HOST we are allowing all the other IPs can connect to the mysql
+Running mysql in container, set password as "password" and by setting MYSQL_ROOT_HOST we are allowing all the other IPs can connect to the mysql
 ```bash
 docker run  --name mysqlhost --network mynet -e MYSQL_ROOT_PASSWORD=password -e MYSQL_ROOT_HOST=% -d mysql/mysql-server
 ```
 
-Once mysql starts running we need to login inside the container connect to mysql and create a new database
+Once mysql starts running, we need to get inside the running MySQL container, connect to mysql and create a new database
 ```bash
 docker exec -it mysqlhost bash
 ```
 
+Connect to MySQL
 ```bash
 bash-4.4# mysql -uroot -ppassword
 ```
 
-
+Create new daatabase
 ```bash
 mysql>  create database testdb;
 ```
 
 Either exit from the docker container or run following commands in other terminal 
-
 ## Create Docker image from golang code
 
 ```bash
