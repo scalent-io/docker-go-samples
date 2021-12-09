@@ -46,4 +46,5 @@ docker run -p 8090:8090 --network mynet  -it go-client:goClientTag
 ```
 
 ## Visit the link 
-Open browser and visit [http://localhost:8080/hi](http://localhost:8080/hi)
+
+Open browser and visit [http://localhost:8090/client-api](http://localhost:8090/client-api)
