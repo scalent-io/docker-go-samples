@@ -1,0 +1,16 @@
+version: "3.9"
+services: 
+  database-service:  # this is also a database host name, while connecting to db, we have to use this 
+    image: mysql/mysql-server
+    volumes:           # volume will create a persistent database
+        - ./init.sql:/db/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: password  #setting password to "password" mysql will have this as a root password for connecting to db
+      MYSQL_DATABASE: "testdb" # if database is not exist docker-compose creates it, and once connected we are creating a table from go app
+      MYSQL_ROOT_HOST: "%"  # the value has set to "%" meaning any client ip can connect to this mysql server, 
+  go-service: 
+    build: .   #build with "." service bill build sing Dockerfile 
+    ports: 
+    - 8080:80
+    depends_on: 
+    - database-service
